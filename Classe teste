@@ -1,0 +1,73 @@
+import java.util.Scanner;
+
+public class TesteFun4Study{
+    public static void main(String[]args){
+        Scanner sc = new Scanner(System.in);
+        
+        
+        System.out.println("Digite o código: ");
+        System.out.println("Digite a Descrição: ");
+        System.out.println("Digite o UF: ");
+        
+        Cidade c1 = new Cidade(
+        sc.nextInt(),
+        sc.next(),
+        sc.next());
+        
+        Estudante e1 = new Estudante(
+        sc.nextInt(),
+        sc.next(),
+        sc.next(),
+        sc.next(),
+        sc.next(),
+        c1);
+        
+        Estudante e2 = new Estudante(sc.nextInt(),sc.next(),sc.next(),sc.next(),sc.next(),c1);
+        
+        
+        
+        
+        Cidade c2 = new Cidade(sc.nextInt(),sc.next(),sc.next());
+        
+        Estudante e3 = new Estudante(sc.nextInt(),sc.next(),sc.next(),sc.next(),sc.next(),c2);
+        
+        Estudante e4 = new Estudante(sc.nextInt(),sc.next(),sc.next(),sc.next(),sc.next(),c2);
+        
+        
+        
+        
+        
+        
+        //--------------------------------------------------------------------------
+        //System.out.println("Digite o código: ");
+        //System.out.println("Digite a Descrição: ");
+        //System.out.println("Digite o UF: ");
+        //---------------------------------------------------------------------------
+        System.out.println("-------------------------------------------");
+        c1.exibeDados();
+        System.out.println("-------------------------------------------");
+        c2.exibeDados();
+        System.out.println("-------------------------------------------");
+        e1.exibeDados();
+        System.out.println("-------------------------------------------");
+        e2.exibeDados();
+        System.out.println("-------------------------------------------");
+        e3.exibeDados();
+        System.out.println("-------------------------------------------");
+        e4.exibeDados();
+        System.out.println("-------------------------------------------");
+        
+        
+        System.out.println(e1.getNome());
+        e1.setSenha();
+        System.out.println(e2.getNome());
+        e2.setSenha();
+        System.out.println(e3.getNome());
+        e3.setSenha();
+        System.out.println(e4.getNome());
+        e4.setSenha();
+        
+        
+        //---------------------------------------------------------------------------
+    }
+}
