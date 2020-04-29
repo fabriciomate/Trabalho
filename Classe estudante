@@ -1,0 +1,88 @@
+import java.util.Scanner;
+
+
+        public class Estudante {
+        Scanner sc = new Scanner(System.in);
+        private int Cod;
+        private String Nome;
+        private String Data_de_nascimento;
+        private String Email;
+        private String Senha;
+        private Cidade cidade;
+         
+        public Estudante(int cod, String nome, String data, String email, String senha, Cidade cidade) {
+            this.Cod = cod;
+            this.Nome = nome;
+            Data_de_nascimento = data;
+            this.Email = email;
+            this.Senha = senha;
+            this.cidade = cidade;
+            cidade.adicionaNovoEstudante();
+        }
+        public int getCod(){
+            return Cod;
+          }
+        public String getNome(){
+            return Nome;
+          }
+        public String getData(){
+            return Data_de_nascimento;
+          }
+        public String getEmail(){
+            return Email;
+          }
+        public String getSenha(){
+            return Senha;
+          }
+        public Cidade getCidade(){
+            return cidade;
+          }
+        public void setCod(int newcod){
+           Cod = newcod; 
+          }
+        public void setNome(String newNome){
+           Nome = newNome; 
+          }
+        public void setData(String newData){
+           Data_de_nascimento = newData; 
+          }
+        public void setEmail(String newEmail){
+           Email = newEmail; 
+          }
+        String Senhaa;
+        String Senhab;
+        String antSenha;
+          public void setSenha(){
+          
+            do{
+              System.out.print("Senha antiga: \n");
+              antSenha = sc.next();
+              if(!(Senha.equals(antSenha))){
+                  System.out.println("Senha Inválida!");
+                }
+            }while(!(Senha.equals(antSenha)));
+             
+            do{
+              System.out.print("Nova Senha: \n");
+              Senhaa = sc.next();
+              System.out.print("Digite novamente: \n");
+              Senhab = sc.next(); 
+              if(!(Senhaa.equals(Senhab))){
+                  System.out.println("Senhas não compatíveis!");
+                }
+            }while(!(Senhaa.equals(Senhab)));
+             Senha = Senhab;
+        
+        
+            }
+          public void setCidade(Cidade newCidade){
+           cidade = newCidade; 
+          }
+          public void exibeDados(){
+             System.out.println("Código: "+ Cod);
+             System.out.println("Nome: " + Nome);
+             System.out.println("Data de nascimento: "+ Data_de_nascimento);
+             System.out.println("Email: "+ Email);
+             System.out.println("Senha " + Senha);
+            }
+        }
