@@ -1,0 +1,38 @@
+public class Cidade{
+ private int cod;
+ private String desc;
+ private String uf;
+ private int qtestudantes;
+ 
+ public Cidade(int codigo, String desc, String uf){
+     cod = codigo;
+     this.desc = desc;
+     this.uf = uf;
+     
+    }
+    public int getCodigo(){
+     return cod;   
+    }
+    public String getDescricao(){
+     return desc;   
+    }
+    public String getUf(){
+     return uf;   
+    }
+    public void setDescricao(String newdesc){
+     this.desc = newdesc;   
+    }
+    public void setUf(String newuf){
+     this.uf = newuf;   
+    }
+    public void adicionaNovoEstudante(){
+     qtestudantes++;   
+    }
+    public void exibeDados(){
+     System.out.println("Código: " + cod);
+     System.out.println("Descrição: " + desc);
+     System.out.println("UF: " + uf);
+     System.out.println("Quantidade de estudantes: " + qtestudantes);
+    }
+    
+}
